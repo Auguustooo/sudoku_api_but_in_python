@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "undefined/subscriptions/925b88ef-82b7-4170-9cc1-98af263af3eb/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/sudokupython",
-    "appService.deploySubpath": "."
-}
