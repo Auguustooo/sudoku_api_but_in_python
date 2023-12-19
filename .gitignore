@@ -1,0 +1,4 @@
+# .gitignore
+
+# Ausschließen des .vs-Ordners
+.vs/
