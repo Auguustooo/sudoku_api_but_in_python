@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from sudokuLib.Sudoku import Sudoku
+import ast
 
 app = Flask(__name__)
 
@@ -25,7 +26,12 @@ def post_given_sudoku():
 def get_sudoku():
     global json_string
     if json_string != None:
-        return jsonify(json_string)
+        liste = ast.literal_eval(json_string)
+        final_list = []
+        for row in liste:
+            formatted_row = '[' + ']['.join(map(str, row)) + ']'
+            final_list.append(formatted_row)
+        return jsonify(final_list)
     else:
         return "Failed to GET", 400
 
